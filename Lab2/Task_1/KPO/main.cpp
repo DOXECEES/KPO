@@ -1,21 +1,39 @@
-#include "main.h" 
+#include <iostream>
+#include <string>
+#include <vector>
+#include <cmath>
+#include <Windows.h>
+
+void sort(std::vector<std::string>& vec);
 
 int main()
 {
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	std::vector<std::string> vecOfBinaryStrings;
+	std::string input;
+	int size;
+	std::cout << "¬ведите число строк" << std::endl;
+	std::cin >> size;
 
-}
-
-int BinToDec(std::string str)
-{
-	int dec = 0;
-
-	for (int i = 2; i < str.size(); ++i)
+	std::cout << "¬ведите строки" << std::endl;
+	for (int i = 0; i < size; ++i)
 	{
-		dec += (str[i] - 48) * static_cast<int>(pow(2, str.size() - i - 1));
+		std::cin >> input;
+		vecOfBinaryStrings.push_back(input);
 	}
 
-	return dec;
+	sort(vecOfBinaryStrings);
+
+	std::cout << "ќтсортированный массив" << std::endl;
+
+	for (int i = 0; i < size; ++i)
+	{
+		std::cout << vecOfBinaryStrings[i] << std::endl;
+	}
+
 }
+
 
 void sort(std::vector<std::string>& vec)
 {
@@ -25,12 +43,19 @@ void sort(std::vector<std::string>& vec)
 	{
 		for (int j = 0; j <vec.size() - i - 1; j++)
 		{
-			
-			if (BinToDec(vec[j]) < BinToDec(vec[j+1]))
+			if (vec[j].size() < vec[j + 1].size())
 			{
 				temp = vec[j];
 				vec[j] = vec[j + 1];
 				vec[j + 1] = temp;
+				continue;
+			}
+			if (vec[j].compare(vec[j + 1]) < 0)
+			{
+				temp = vec[j];
+				vec[j] = vec[j + 1];
+				vec[j + 1] = temp;
+				continue;
 			}
 		}
 	}
