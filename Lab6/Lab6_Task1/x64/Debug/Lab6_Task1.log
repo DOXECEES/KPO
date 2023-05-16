@@ -1,0 +1,8 @@
+﻿  main.cpp
+C:\rep\KPO\Lab6_Task1\main.cpp(28,31): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\rep\KPO\Lab6_Task1\main.cpp(49,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\rep\KPO\Lab6_Task1\main.cpp(62,41): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\rep\KPO\Lab6_Task1\main.cpp(63,41): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\rep\KPO\Lab6_Task1\main.cpp(64,41): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\rep\KPO\Lab6_Task1\main.cpp(65,41): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Lab6_Task1.vcxproj -> C:\rep\KPO\x64\Debug\Lab6_Task1.exe
